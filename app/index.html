@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blockchain Digital Wallet</title>
+ 
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+ 
+		
+</head>
+<body>
+<div class="wrapper">
+  
+  
+  <h1>Digital Wallet Dapp</h1>
+  
+  <div class="btn-group" id="form-selector">
+		
+		<button type="button" class="btn btn-selector active" id="sign-up-btn">Sign Up</button>
+		<button type="button" class="btn btn-selector" id="log-in-btn">Log In</button>
+		<button type="button" class="btn btn-selector" id="balance-btn">Balance</button>
+		<button type="button" class="btn btn-selector" id="payments-btn">Payments</button>
+		<button type="button" class="btn btn-selector" id="transaction-btn">Wallet Transactions</button>
+	</div>
+	
+	<div class="form" id="sign-up-form">
+		<h2 class="form-title">Sign Up Form</h2>
+		<input type="email" class="input-std" id="email" placeholder="Email">
+		<input type="text" class="input-std" id="first-name" placeholder="First Name">
+		<input type="text" class="input-std" id="middle-name" placeholder="Middle Name">
+		<input type="text" class="input-std" id="last-name" placeholder="Last Name">
+		<input type="password" class="input-std" id="Upassword" placeholder="Enter Password">
+		<input type="password" class="input-std" id="password-confirmation" placeholder="Password Confirmation">
+
+		<input type="date" class="input-std" id="dob">
+		<table>
+		<tr>
+		<td>Gender:</td>
+		<td><input type="radio" id="g1" name="gender" value="Male" checked></td>
+		<td>Male</td>
+		<td><input type="radio" id="g2" name="gender" value="Female"></td>
+		<td>Female</td>
+		<td><input type="radio" id="g3" name="gender" value="Other"></td>
+		<td>Other&nbsp</td>
+		</tr>
+		</table>
+		
+		<table>
+		<tr>
+		<td>Nationality:</td>
+		<td><input type="radio" id="c1"  name="country" value="Indian" checked></td>
+		<td>Indian</td>
+		<td><input type="radio" id="c2"  name="country" value="Others"></td>
+		<td>Other</td>
+		<td>&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td>&nbsp&nbsp&nbsp&nbsp&nbsp</td></tr>
+		</table>
+		
+		<input type="number" class="input-std" id="aadhar" placeholder="Aadhar Number">
+		<button type="button" class="btn-submit" id="sign-up" onclick="RegisterUser()">Sign Up!</button>
+		<br>
+		<br>
+		<span>Please note down the below address</span>
+		<span id="lightwalletaddr"></span>
+	</div>
+	
+	<div class="form" id="log-in-form">
+		<h2 class="form-title">Log In</h2>
+		<input type="text" class="input-std" id="userlogid" placeholder="UserId">
+		<input type="password" class="input-std" id="lpassword" placeholder="Password">
+		<div id="remember-me-wrapper">
+		<input type="checkbox" id="remember-me">
+		<label for="remember-me">Remember Me</label>
+		</div>
+		<button type="button" class="btn-submit" id="log-in" onclick="GetUserDetails();">Log In!</button>
+	</div>
+	
+	<div class="form" id="balance-form">
+  <h3>Balance : <span class="black"><span id="balance"></span> $ </span></h3>
+  <h3>Public Id : </h3><span class="black"><span id="SenderBalance"></span>
+  </div>
+	
+  <div class="form" id="payments-form">
+  
+  <h2>Payments</h2>
+  
+  <input type="text" id="amount" class="input-std" placeholder="Enter amount"></input>
+  <input type="text" class="input-std" id="receiver" placeholder="Enter receiver's public id"></input>
+  
+  <br><br><button id="send" class="btn-submit" onclick="sendCoin()">Send Amount</button>
+  <br><br>
+ 
+  <span id="status"></span>
+  </div>
+ </div> 
+ 
+ <div class="form" id="transaction-form">
+	
+ <h4>Wallet Transactions: </h4>
+ 
+ <span class="black"><span id="TReceiver"></span> <br>
+		
+		<span class="black"><span id="TAmount"></span> <br>
+ 
+        <div id="trans" class="logs">
+		
+        </div>
+</div>
+		
+	    <script src="./app.js"></script>
+	   
+</body>
+</html>
