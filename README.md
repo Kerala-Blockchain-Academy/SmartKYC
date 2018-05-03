@@ -1,0 +1,2 @@
+# SmartKYC
+Digital Wallet DAPP
